@@ -1,23 +1,89 @@
 aid: armorcodeinc
+
 name: Armorcodeinc
-description: 'Armorcodeinc is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.armorcode.com/wp-content/uploads/2025/11/ArmorCode_default-thumb_R2_updated-11-11-25.png
+
+description: ArmorCode is the independent control plane where AI agents help find, prioritize, and fix vulnerabilities across apps, cloud, infra,
+  and AI. It offers a unified exposure management platform integrating risk graphs, agentic workflows, and compliance tools for enterprises.
+
 url: https://raw.githubusercontent.com/api-evangelist/armorcodeinc/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Security
+- AI
+- RiskManagement
+- ExposureManagement
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/armorcodeinc-llms.txt
+- type: SecurityTxt
+  url: well-known/armorcodeinc-status-security.txt
+- type: WellKnown
+  url: well-known/armorcodeinc-well-known.yml
+- type: Hosts
+  url: hosts/armorcodeinc-hosts.yml
+- type: Vendors
+  url: vendors/armorcodeinc-vendors.yml
+- type: TermsOfService
+  url: https://www.armorcode.com/terms-of-use
+- type: Support
+  url: https://www.armorcode.com/support
+- type: StatusPage
+  url: https://status.armorcode.com/
+- type: Security
+  url: https://www.armorcode.com/security
+- type: PrivacyPolicy
+  url: https://www.armorcode.com/privacy-policy
+- type: Newsroom
+  url: https://www.armorcode.com/news
+- type: Leadership
+  url: https://www.armorcode.com/leadership
+- type: Blog
+  url: https://www.armorcode.com/blog
+- type: DomainSecurity
+  url: security/armorcodeinc-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/armorcodeinc
+  url: https://www.armorcode.com
+
+apis:
+- name: Armorcode API
+  description: ArmorCode provides a unified exposure management platform for AI-driven vulnerability detection and remediation.
+  humanURL: https://www.armorcode.com
+  aid: armorcodeinc:armorcode-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL spec could be found on any discovered host.
+  evidence:
+  - url: https://api.armorcode.com/openapi.json
+    status: 0
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

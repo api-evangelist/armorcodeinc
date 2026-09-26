@@ -1,0 +1,132 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 10
+  own: 8
+  other_domain: 1
+  platform: 1
+  roles:
+  - api
+  - other
+  - status
+  - support
+  - website
+hosts:
+- host: api.armorcode.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: armorcode.com
+  role: api
+  relation: own
+- host: app.armorcode.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: armorcode.com
+  role: other
+  relation: own
+- host: armorcode.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: armorcode.com
+  role: other
+  relation: own
+- host: armorcode.kinsta.cloud
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: kinsta.cloud
+  role: other
+  relation: other-domain
+- host: console.armorcode.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: armorcode.com
+  role: other
+  relation: own
+- host: demo.armorcode.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: armorcode.com
+  role: other
+  relation: own
+- host: softwareanalyst.substack.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: substack.com
+  role: other
+  relation: platform
+- host: status.armorcode.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: armorcode.com
+  role: status
+  relation: own
+- host: support.armorcode.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: armorcode.com
+  role: support
+  relation: own
+- host: www.armorcode.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - Support
+  - Security
+  - PrivacyPolicy
+  - Newsroom
+  - Leadership
+  - Blog
+  - Website
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: armorcode.com
+  role: website
+  relation: own
